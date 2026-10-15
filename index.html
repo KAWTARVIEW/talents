@@ -1,128 +1,724 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HUNANIMA - Machines Agricoles Simples</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #fefefe;
-      color: #333;
-    }
-    header {
-      background-color: #2e7d32; /* Vert foncé */
-      color: #fdd835; /* Jaune vif */
-      padding: 20px;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5em;
-    }
-    header p {
-      margin: 5px 0 0;
-      font-size: 1.2em;
-    }
-    nav {
-      background-color: #fdd835;
-      padding: 10px;
-      text-align: center;
-    }
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-      color: #2e7d32;
-    }
-    .hero {
-      background: url('https://i.pinimg.com/550x/a9/df/51/a9df5172829f8c05f5b92f97553d41ae.jpg') no-repeat center center/cover;
-      height: 350px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      text-shadow: 2px 2px 4px #000;
-      font-size: 2em;
-    }
-    section {
-      padding: 50px 20px;
-      text-align: center;
-    }
-    section h2 {
-      color: #2e7d32;
-      margin-bottom: 20px;
-    }
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-    .gallery img {
-      width: 280px;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
-    footer {
-      background-color: #2e7d32;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-    }
-    footer p {
-      margin: 5px 0;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELEVATE TALENT LLC | Strategic Talent Acquisition & Staffing Solutions</title>
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.344.0/dist/umd/lucide.min.js"></script>
+    <style>
+        /* Electric Violet, Obsidian & Warm Coral Palette */
+        :root {
+            --bg-main: #f8f9fc;
+            --bg-card: #ffffff;
+            --slate-obsidian: #0b0f19;
+            --violet-primary: #6366f1;
+            --violet-dark: #4338ca;
+            --violet-soft: rgba(99, 102, 241, 0.12);
+            --coral-accent: #f43f5e;
+            --coral-soft: #fff1f2;
+            --text-dark: #0f172a;
+            --text-muted: #475569;
+            --border-color: #e2e8f0;
+            --font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-dark);
+            font-family: var(--font-family);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Announcement Strip */
+        .top-notice {
+            background: var(--slate-obsidian);
+            color: #cbd5e1;
+            font-size: 0.825rem;
+            font-weight: 500;
+            padding: 0.65rem 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .top-notice div {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Header Navigation */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1.25rem 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: var(--slate-obsidian);
+            letter-spacing: -0.02em;
+        }
+
+        .brand i {
+            color: var(--violet-primary);
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--violet-primary);
+        }
+
+        .btn-violet {
+            background: linear-gradient(135deg, var(--violet-primary), var(--violet-dark));
+            color: #ffffff;
+            padding: 0.75rem 1.6rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 14px var(--violet-soft);
+        }
+
+        .btn-violet:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(99, 102, 241, 0.35);
+        }
+
+        .wrapper {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Hero Slides Section */
+        #about {
+            padding: 4rem 0 5rem 0;
+        }
+
+        .hero-slider-container {
+            position: relative;
+            background: var(--slate-obsidian);
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(11, 15, 25, 0.15);
+        }
+
+        .slide {
+            display: none;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 3rem;
+            padding: 5rem;
+            align-items: center;
+        }
+
+        .slide.active {
+            display: grid;
+        }
+
+        .hero-text h1 {
+            font-size: 3.25rem;
+            line-height: 1.15;
+            color: #ffffff;
+            font-weight: 800;
+            margin-bottom: 1.25rem;
+            letter-spacing: -0.025em;
+        }
+
+        .hero-text h1 span {
+            color: var(--violet-primary);
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            color: #94a3b8;
+            margin-bottom: 2rem;
+        }
+
+        .hero-slide-img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .slider-controls {
+            position: absolute;
+            bottom: 2rem;
+            right: 5rem;
+            display: flex;
+            gap: 0.75rem;
+            z-index: 10;
+        }
+
+        .slide-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .slide-btn:hover {
+            background: var(--violet-primary);
+        }
+
+        /* Services Grid */
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 6rem auto 3rem auto;
+        }
+
+        .section-header span {
+            color: var(--violet-primary);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 0.85rem;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.25rem;
+            color: var(--slate-obsidian);
+            font-weight: 800;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--violet-primary);
+            box-shadow: 0 16px 32px rgba(99, 102, 241, 0.12);
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .service-card-body {
+            padding: 2rem;
+        }
+
+        .service-card-body h3 {
+            font-size: 1.25rem;
+            color: var(--slate-obsidian);
+            margin-bottom: 0.75rem;
+            font-weight: 700;
+        }
+
+        .service-card-body p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Feature Banner */
+        .showcase-banner {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 4rem;
+            margin: 6rem 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .showcase-images {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .showcase-images img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 16px;
+        }
+
+        .showcase-images img:first-child {
+            grid-column: span 2;
+            height: 250px;
+        }
+
+        .showcase-content h3 {
+            font-size: 2rem;
+            color: var(--slate-obsidian);
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .showcase-content p {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-bullets {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .feature-bullets li {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--slate-obsidian);
+            font-weight: 600;
+        }
+
+        .feature-bullets li i {
+            color: var(--violet-primary);
+        }
+
+        /* Contact Section */
+        .contact-card {
+            background: #ffffff;
+            border-radius: 24px;
+            border: 1px solid var(--border-color);
+            padding: 4rem;
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 4rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+            margin-bottom: 6rem;
+        }
+
+        .contact-info h2 {
+            font-size: 2rem;
+            color: var(--slate-obsidian);
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .info-row {
+            display: flex;
+            gap: 1.25rem;
+            margin-top: 2rem;
+            align-items: flex-start;
+        }
+
+        .info-row i {
+            color: var(--violet-primary);
+            background: var(--violet-soft);
+            padding: 1rem;
+            border-radius: 14px;
+        }
+
+        .info-row label {
+            display: block;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-muted);
+            font-weight: 700;
+        }
+
+        .info-row strong {
+            font-size: 1rem;
+            color: var(--slate-obsidian);
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            background: var(--bg-main);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1rem;
+            color: var(--text-dark);
+            font-family: inherit;
+            font-size: 0.95rem;
+        }
+
+        .contact-form input:focus, .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--violet-primary);
+            background: #ffffff;
+        }
+
+        .submit-btn {
+            background: var(--slate-obsidian);
+            color: #ffffff;
+            border: none;
+            padding: 1.1rem;
+            border-radius: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .submit-btn:hover {
+            background: var(--violet-primary);
+        }
+
+        /* Modal Privacy Policy */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(11, 15, 25, 0.7);
+            backdrop-filter: blur(6px);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal-body {
+            background: #ffffff;
+            border-radius: 20px;
+            max-width: 750px;
+            max-height: 80vh;
+            overflow-y: auto;
+            padding: 3rem;
+            position: relative;
+            color: var(--text-muted);
+        }
+
+        .modal-body h3 {
+            color: var(--slate-obsidian);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .modal-body h4 {
+            color: var(--slate-obsidian);
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            background: none;
+            border: none;
+            color: var(--text-dark);
+            cursor: pointer;
+        }
+
+        footer {
+            background: var(--slate-obsidian);
+            color: #94a3b8;
+            padding: 3rem 0;
+            text-align: center;
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .footer-links {
+            margin-top: 1rem;
+        }
+
+        .footer-links a {
+            color: var(--violet-primary);
+            text-decoration: none;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        @media (max-width: 1024px) {
+            .slide, .showcase-banner, .contact-card {
+                grid-template-columns: 1fr;
+                padding: 3rem 2rem;
+            }
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            .slider-controls {
+                right: 2rem;
+                bottom: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
 
-  <header>
-    <h1>HUNANIMA</h1>
-    <p>Machines Agricoles Simples et Fiables</p>
-  </header>
-
-  <nav>
-    <a href="#about">À propos</a>
-    <a href="#gallery">Galerie</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <div class="hero">
-    <p>Votre partenaire pour des machines agricoles durables</p>
-  </div>
-
-  <section id="about">
-    <h2>À propos de nous</h2>
-    <p>
-      Chez <strong>HUNANIMA</strong>, nous nous spécialisons dans la fabrication et la distribution de 
-      <strong>machines agricoles simples</strong> pour faciliter le travail des agriculteurs. 
-      Nos solutions combinent <em>durabilité, efficacité et innovation</em> afin de répondre aux besoins de toutes les exploitations.
-    </p>
-  </section>
-
-  <section id="gallery">
-    <h2>Nos Machines</h2>
-    <div class="gallery">
-      <img src="http://ogden_images.s3.amazonaws.com/www.motherearthnews.com/images/2014/11/22234423/Boaz-Mini-Combine-jpg.jpg" alt="Mini moissonneuse">
-      <img src="https://krs-agro.ru/products/zagotovka_kormov/elho/19/7.jpg" alt="Machine agricole">
-      <img src="https://img.mod-network.net/files/images/6218ac69d37fb/SimpleFarmSilov1000_6222.jpg" alt="Équipement agricole simple">
+    <div class="top-notice">
+        <div><i data-lucide="briefcase" size="15"></i> ELEVATE TALENT LLC — Employment Agency & Staffing Solutions[cite: 16]</div>
+        <div>Atlanta, GA Headquarters[cite: 16]</div>
     </div>
-  </section>
 
-  <section id="contact">
-    <h2>Contactez-nous</h2>
-    <p><strong>Email :</strong> admin@tyusex.shop</p>
-    <p><strong>Téléphone :</strong> +33 7 38 50 26 36</p>
-    <p><strong>Adresse :</strong> Avenue Baratier, Montmorency, 95160, France</p>
-  </section>
+    <header>
+        <div class="brand">
+            <i data-lucide="users"></i> Elevate Talent
+        </div>
+        <nav>
+            <a href="#about">Overview</a>
+            <a href="#services">Staffing Solutions</a>
+            <a href="#expertise">Industry Focus</a>
+            <a href="#contact" class="btn-violet">Hire Talent</a>
+        </nav>
+    </header>
 
-  <footer>
-    <p>&copy; 2025 HUNANIMA - Tous droits réservés.</p>
-  </footer>
+    <div class="wrapper">
+        <!-- Hero Section with Slides -->
+        <section id="about">
+            <div class="hero-slider-container">
+                <!-- Slide 1 -->
+                <div class="slide active">
+                    <div class="hero-text">
+                        <h1>Connecting Exceptional <span>Talent</span> With Industry Leaders</h1>
+                        <p>Elevate Talent LLC provides customized executive recruitment, contingent staffing, and workforce management across Georgia[cite: 16].</p>
+                        <a href="#contact" class="btn-violet" style="padding: 1rem 2rem; display: inline-block;">Find Talent Today</a>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Professional executive woman in modern office setting" class="hero-slide-img">
+                </div>
 
+                <!-- Slide 2 -->
+                <div class="slide">
+                    <div class="hero-text">
+                        <h1>Strategic Workforce <span>Solutions</span> That Scale</h1>
+                        <p>Empowering businesses with agile staffing frameworks, direct-hire placement, and high-impact administrative support[cite: 16].</p>
+                        <a href="#contact" class="btn-violet" style="padding: 1rem 2rem; display: inline-block;">Consult Our Recruiters</a>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="Diverse corporate team collaborating around table">
+                </div>
+
+                <!-- Slider Controls -->
+                <div class="slider-controls">
+                    <button class="slide-btn" onclick="prevSlide()"><i data-lucide="chevron-left"></i></button>
+                    <button class="slide-btn" onclick="nextSlide()"><i data-lucide="chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services">
+            <div class="section-header">
+                <span>Our Capabilities</span>
+                <h2>Comprehensive Staffing & Employment Services</h2>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80" alt="Executive male professional giving presentation">
+                    <div class="service-card-body">
+                        <h3>Executive Search & Direct Hire</h3>
+                        <p>Targeted recruitment strategies designed to place high-performing leaders and technical specialists into permanent roles[cite: 16].</p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80" alt="Recruiter interviewing candidate in glass office">
+                    <div class="service-card-body">
+                        <h3>Contingent & Contract Staffing</h3>
+                        <p>Flexible short-term, long-term, and project-based talent solutions to maintain operational momentum[cite: 16].</p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80" alt="Corporate team analyzing charts and talent statistics">
+                    <div class="service-card-body">
+                        <h3>Administrative & Support Services</h3>
+                        <p>Streamlined workforce optimization, candidate screening, and back-office administrative staffing management[cite: 16].</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature Showcase -->
+        <section id="expertise" class="showcase-banner">
+            <div class="showcase-images">
+                <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80" alt="Team onboarding session with laptops">
+                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=600&q=80" alt="HR manager conducting interview">
+                <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=600&q=80" alt="Group of professionals shaking hands after agreement">
+            </div>
+
+            <div class="showcase-content">
+                <span style="color: var(--violet-primary); text-transform: uppercase; font-weight: 700; letter-spacing: 0.1em; font-size: 0.85rem; display: block; margin-bottom: 0.5rem;">Precision Placement</span>
+                <h3>Accelerating Success Through Qualified Talent</h3>
+                <p>At Elevate Talent LLC, we combine deep market insights with rigorous candidate vetting to deliver staffing excellence across diverse business sectors[cite: 16].</p>
+
+                <ul class="feature-bullets">
+                    <li><i data-lucide="check-circle-2"></i> Comprehensive Candidate Vetting & Background Checks</li>
+                    <li><i data-lucide="check-circle-2"></i> Rapid Placement & Reduced Time-to-Hire</li>
+                    <li><i data-lucide="check-circle-2"></i> Industry-Compliant Employment Partnerships[cite: 16]</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="contact-card">
+                <div class="contact-info">
+                    <h2>Reach Our Talent Team</h2>
+                    <p>Connect with our Atlanta recruiters to discuss your hiring requirements or career placement options[cite: 16].</p>
+
+                    <div class="info-row">
+                        <i data-lucide="mail"></i>
+                        <div>
+                            <label>Direct Support</label>
+                            <strong>support@elevatetalentllc.org</strong>
+                        </div>
+                    </div>
+
+                    <div class="info-row">
+                        <i data-lucide="phone"></i>
+                        <div>
+                            <label>Telephone Line</label>
+                            <strong>+1 530 971 1189</strong>
+                        </div>
+                    </div>
+
+                    <div class="info-row">
+                        <i data-lucide="map-pin"></i>
+                        <div>
+                            <label>Atlanta Office</label>
+                            <strong>208 Mayson Ave NE Atlanta, GA, 30307-2842 United States</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" onsubmit="event.preventDefault();">
+                    <div class="form-row">
+                        <input type="text" placeholder="Full Name / Organization" required>
+                        <input type="text" placeholder="Phone Number" required>
+                    </div>
+                    <input type="email" placeholder="Email Address" required>
+                    <textarea rows="5" placeholder="Specify your staffing requirements, open roles, or candidate inquiry..." required></textarea>
+                    <button type="submit" class="submit-btn">Submit Hiring Request</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <!-- Privacy Policy Modal -->
+    <div id="privacy-modal" class="modal-overlay">
+        <div class="modal-body">
+            <button class="close-btn" onclick="togglePrivacyModal()"><i data-lucide="x" size="24"></i></button>
+            <h3>Privacy Policy</h3>
+
+            <h4>1. Information Collection</h4>
+            <p>ELEVATE TALENT LLC collects personal and professional details submitted via contact forms strictly to evaluate placement opportunities and facilitate staffing services[cite: 16].</p>
+
+            <h4>2. Data Protection</h4>
+            <p>We maintain high administrative safeguards to secure candidate and corporate details. Information is never rented, sold, or distributed to unauthorized third parties.</p>
+
+            <h4>3. Compliance Contact</h4>
+            <p>For questions regarding our privacy practices, please contact support@elevatetalentllc.org.</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="wrapper">
+            <div class="footer-links">
+                <a onclick="togglePrivacyModal()">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (i === index) slide.classList.add('active');
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function togglePrivacyModal() {
+            const modal = document.getElementById('privacy-modal');
+            modal.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
